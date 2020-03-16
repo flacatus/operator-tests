@@ -1,15 +1,15 @@
-package prow_operator_test_harness
+package operator_tests
 
 import (
 	"path/filepath"
 	"testing"
 
-	"github.com/flacatus/operator-osd/pkg/metadata"
+	"github.com/flacatus/operator-tests/pkg/metadata"
 	. "github.com/onsi/ginkgo"
 	"github.com/onsi/ginkgo/reporters"
 	. "github.com/onsi/gomega"
 
-	_ "github.com/flacatus/operator-osd/pkg/tests"
+	_ "github.com/flacatus/operator-tests/pkg/tests"
 )
 
 const (
@@ -29,3 +29,4 @@ func TestCheOperatorTestHarness(t *testing.T) {
 		t.Errorf("error while writing metadata: %v", err)
 	}
 }
+
