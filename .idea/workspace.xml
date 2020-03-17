@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c8e40e7-1890-479d-a724-999d7fe081e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pkg/tests/config_maps_tests.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/tests/constants.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/tests/deployment_tests.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/tests/secrets_tests.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/tests/service_tests.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/tests/che_operator_tests.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/tests/pods_tests.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/tests/constants.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/tests/constants.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/tests/resources_tests.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/tests/resources_tests.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/tests/service_tests.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/tests/service_tests.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

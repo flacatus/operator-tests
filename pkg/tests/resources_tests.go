@@ -13,7 +13,7 @@ var _ = ginkgo.Describe("Che Operator Tests", func() {
 		apiextensions, err := clientset.NewForConfig(configuration)
 		Expect(err).NotTo(HaveOccurred())
 		// Make sure the CRD exist in cluster
-		_, err = apiextensions.ApiextensionsV1beta1().CustomResourceDefinitions().Get(CrName, metav1.GetOptions{})
+		_, err = apiextensions.ApiextensionsV1beta1().CustomResourceDefinitions().Get(CRDName, metav1.GetOptions{})
 
 		if err != nil {
 			metadata.Instance.FoundCRD = false
