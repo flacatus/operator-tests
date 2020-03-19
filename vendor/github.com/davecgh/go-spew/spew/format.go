@@ -389,7 +389,7 @@ func (f *formatState) Format(fs fmt.State, verb rune) {
 	f.format(reflect.ValueOf(f.value))
 }
 
-// newFormatter is a helper function to consolidate the logic from the various
+// newFormatter is a client function to consolidate the logic from the various
 // public methods which take varying config states.
 func newFormatter(cs *ConfigState, v interface{}) fmt.Formatter {
 	fs := &formatState{value: v, cs: cs}

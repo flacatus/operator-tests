@@ -157,8 +157,8 @@ func Expect(actual interface{}, extra ...interface{}) Assertion {
 // Unlike `Expect` and `Ω`, `ExpectWithOffset` takes an additional integer argument
 // that is used to modify the call-stack offset when computing line numbers.
 //
-// This is most useful in helper functions that make assertions.  If you want Gomega's
-// error message to refer to the calling line in the test (as opposed to the line in the helper function)
+// This is most useful in client functions that make assertions.  If you want Gomega's
+// error message to refer to the calling line in the test (as opposed to the line in the client function)
 // set the first argument of `ExpectWithOffset` appropriately.
 func ExpectWithOffset(offset int, actual interface{}, extra ...interface{}) Assertion {
 	if globalFailWrapper == nil {
@@ -208,7 +208,7 @@ func Eventually(actual interface{}, intervals ...interface{}) AsyncAssertion {
 }
 
 // EventuallyWithOffset operates like Eventually but takes an additional
-// initial argument to indicate an offset in the call stack.  This is useful when building helper
+// initial argument to indicate an offset in the call stack.  This is useful when building client
 // functions that contain matchers.  To learn more, read about `ExpectWithOffset`.
 func EventuallyWithOffset(offset int, actual interface{}, intervals ...interface{}) AsyncAssertion {
 	if globalFailWrapper == nil {
@@ -253,7 +253,7 @@ func Consistently(actual interface{}, intervals ...interface{}) AsyncAssertion {
 }
 
 // ConsistentlyWithOffset operates like Consistnetly but takes an additional
-// initial argument to indicate an offset in the call stack. This is useful when building helper
+// initial argument to indicate an offset in the call stack. This is useful when building client
 // functions that contain matchers. To learn more, read about `ExpectWithOffset`.
 func ConsistentlyWithOffset(offset int, actual interface{}, intervals ...interface{}) AsyncAssertion {
 	if globalFailWrapper == nil {

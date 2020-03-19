@@ -22,7 +22,7 @@ import (
 	"strconv"
 )
 
-// compiler helper functions, usually called from generated code
+// compiler client functions, usually called from generated code
 
 // UnpackMap gets a yaml.MapSlice if possible.
 func UnpackMap(in interface{}) (yaml.MapSlice, bool) {

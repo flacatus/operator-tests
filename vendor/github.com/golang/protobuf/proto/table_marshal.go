@@ -386,7 +386,7 @@ func (u *marshalInfo) computeMarshalInfo() {
 	atomic.StoreInt32(&u.initialized, 1)
 }
 
-// helper for sorting fields by tag
+// client for sorting fields by tag
 type byTag []*marshalFieldInfo
 
 func (a byTag) Len() int           { return len(a) }

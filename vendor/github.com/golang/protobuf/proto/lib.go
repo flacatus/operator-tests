@@ -393,7 +393,7 @@ func (p *Buffer) Bytes() []byte { return p.buf }
 // than relying on this API.
 //
 // If deterministic serialization is requested, map entries will be sorted
-// by keys in lexographical order. This is an implementation detail and
+// by keys in lexicographical order. This is an implementation detail and
 // subject to change.
 func (p *Buffer) SetDeterministic(deterministic bool) {
 	p.deterministic = deterministic
@@ -403,19 +403,19 @@ func (p *Buffer) SetDeterministic(deterministic bool) {
  * Helper routines for simplifying the creation of optional fields of basic type.
  */
 
-// Bool is a helper routine that allocates a new bool value
+// Bool is a client routine that allocates a new bool value
 // to store v and returns a pointer to it.
 func Bool(v bool) *bool {
 	return &v
 }
 
-// Int32 is a helper routine that allocates a new int32 value
+// Int32 is a client routine that allocates a new int32 value
 // to store v and returns a pointer to it.
 func Int32(v int32) *int32 {
 	return &v
 }
 
-// Int is a helper routine that allocates a new int32 value
+// Int is a client routine that allocates a new int32 value
 // to store v and returns a pointer to it, but unlike Int32
 // its argument value is an int.
 func Int(v int) *int32 {
@@ -424,43 +424,43 @@ func Int(v int) *int32 {
 	return p
 }
 
-// Int64 is a helper routine that allocates a new int64 value
+// Int64 is a client routine that allocates a new int64 value
 // to store v and returns a pointer to it.
 func Int64(v int64) *int64 {
 	return &v
 }
 
-// Float32 is a helper routine that allocates a new float32 value
+// Float32 is a client routine that allocates a new float32 value
 // to store v and returns a pointer to it.
 func Float32(v float32) *float32 {
 	return &v
 }
 
-// Float64 is a helper routine that allocates a new float64 value
+// Float64 is a client routine that allocates a new float64 value
 // to store v and returns a pointer to it.
 func Float64(v float64) *float64 {
 	return &v
 }
 
-// Uint32 is a helper routine that allocates a new uint32 value
+// Uint32 is a client routine that allocates a new uint32 value
 // to store v and returns a pointer to it.
 func Uint32(v uint32) *uint32 {
 	return &v
 }
 
-// Uint64 is a helper routine that allocates a new uint64 value
+// Uint64 is a client routine that allocates a new uint64 value
 // to store v and returns a pointer to it.
 func Uint64(v uint64) *uint64 {
 	return &v
 }
 
-// String is a helper routine that allocates a new string value
+// String is a client routine that allocates a new string value
 // to store v and returns a pointer to it.
 func String(v string) *string {
 	return &v
 }
 
-// EnumName is a helper function to simplify printing protocol buffer enums
+// EnumName is a client function to simplify printing protocol buffer enums
 // by name.  Given an enum map and a value, it returns a useful string.
 func EnumName(m map[int32]string, v int32) string {
 	s, ok := m[v]
@@ -470,7 +470,7 @@ func EnumName(m map[int32]string, v int32) string {
 	return strconv.Itoa(int(v))
 }
 
-// UnmarshalJSONEnum is a helper function to simplify recovering enum int values
+// UnmarshalJSONEnum is a client function to simplify recovering enum int values
 // from their JSON-encoded representation. Given a map from the enum's symbolic
 // names to its int values, and a byte buffer containing the JSON-encoded
 // value, it returns an int32 that can be cast to the enum type by the caller.
