@@ -6,11 +6,10 @@ import (
 	"k8s.io/client-go/rest"
 )
 
-func createCodeReadyCluster() (cr *orgv1.CheCluster) {
-	const CustomResourceName = "codeready-workspaces"
-	cr = &orgv1.CheCluster{
+func createCodeReadyCluster() *orgv1.CheCluster {
+	return &orgv1.CheCluster{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      CustomResourceName,
+			Name:      crName,
 			Namespace: operatorNamespace,
 		},
 		TypeMeta: metav1.TypeMeta{
@@ -19,11 +18,12 @@ func createCodeReadyCluster() (cr *orgv1.CheCluster) {
 		},
 		Spec: orgv1.CheClusterSpec{
 			Server: orgv1.CheClusterSpecServer{
-				SelfSignedCert: false,
+				SelfSignedCert: true,
+				TlsSupport:true,
+				CheFlavor:CodeReadyCFlavor,
 			},
 		},
 	}
-	return cr
 }
 
 func CreateCodeReadyCustomResource(clientset rest.Interface) (err error) {
